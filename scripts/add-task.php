@@ -7,18 +7,18 @@
 <body>
 	<div class="task">
 		<?php 
+			//Receive item from form
+			$task = $_GET["addTask"];
+			//Connect to database
+			$connection = mysqli_connect('localhost', 'root', '', 'todolist');
+
 			//Function Insert task
 			function insertTask($task, $connection){
 				//Insert item into table
-				$query 				= "insert into items (task) values ('{$task}')";
+				$query 				= "insert into task (item) values ('{$task}')";
 				return mysqli_query($connection, $query);
 			};
 
-			//Receive item from form
-			$task = $_GET["addTask"];
-			
-			//Connect to database
-			$connection = mysqli_connect('localhost', 'root', '', 'todolist');
 
 			if(insertTask($task, $connection)){
 		?>
@@ -35,5 +35,7 @@
 		?>	
 
 	</div>
+
+	<a href="../index.php">Voltar</a>
 </body>
 </html>

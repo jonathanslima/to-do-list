@@ -44,10 +44,6 @@ Form
 	align-items: center;
 }
 
-.form-input{
-	
-}
-
 .form-button{
 	width: 100px;
 	margin: 20px 0;
@@ -55,13 +51,28 @@ Form
 
 
 input[type="text"]{
-	border: 3px solid rgba(255,0,0,.5)
+	border: 3px solid rgba(11,97,164,.5)
 }
 
 /*
 Item style
 ========================================================
 */
+.showTasks{
+	margin-top: 15px
+}
+
+.showTasks ul{
+	text-align: center;
+}
+
+.showTasks ul li{
+	list-style-type: none;
+	padding: 10px;
+	background-color: #eee;
+	color: #0b61a4;
+	border-bottom: 1px solid #0b61a4;
+}
 
 /*
 Message highlight

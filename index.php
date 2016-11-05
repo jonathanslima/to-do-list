@@ -16,6 +16,21 @@
 			<input class="form-input" type="text" name="addTask" autofocus />
 			<input class="form-button" type="submit" name="submit" value="Add Task!" />
 		</form>
+
+		<section class="showTasks">
+			<?php 
+				$connection = mysqli_connect('localhost', 'root', '', 'todolist');
+				$getTask = mysqli_query($connection, 'SELECT * FROM task');
+
+				while ($taskItem = mysqli_fetch_assoc($getTask)) {
+			?>
+					<ul>
+						<li><?php echo $taskItem['item']; ?></li>
+					</ul>
+			<?php 
+				}
+			?>
+		</section>
 		<script src="scripts/all.js"></script>
 	</div>
 </body>
