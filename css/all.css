@@ -45,8 +45,18 @@ Form
 }
 
 .form-button{
-	width: 100px;
 	margin: 20px 0;
+	background-color: #21e061;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 5px;
+	transition: 500ms all ease;
+}
+
+.form-button:hover{
+	background-color: #21b252;
 }
 
 
@@ -69,7 +79,7 @@ Item style
 .showTasks ul li{
 	list-style-type: none;
 	padding: 10px;
-	background-color: #eee;
+	background-color: #fafafa;
 	color: #0b61a4;
 	border-bottom: 1px solid #0b61a4;
 }
@@ -80,4 +90,35 @@ Message highlight
 */
 
 
+/*
+Response
+========================================================
+*/
 
+.task{
+	width: 100%;
+	text-align: center;
+}
+
+.alert-success{
+	color: #21e061;
+	margin-bottom: 20px;
+}
+
+.alert-failed{
+	color: #dd4021;
+	margin-bottom: 20px;
+}
+
+.btn-back{
+	background-color: #21e061;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 15px;
+	border-radius: 5px;
+	transition: 500ms all ease;
+}
+
+.btn-back:hover{
+	background-color: #21b252;
+}
