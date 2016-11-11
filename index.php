@@ -24,13 +24,22 @@
 
 				while ($taskItem = mysqli_fetch_assoc($getTask)) {
 			?>
-					<ul>
-						<li><?php echo $taskItem['item']; ?></li>
+					<ul class="item-task">
+						<li><?php echo $taskItem['item']; ?>
+							<span class="task-edit">
+								<img src="img/settings.svg" alt="">
+							</span>
+
+							<span class="task-remove">
+								<img src="img/remove.svg" alt="">
+							</span>
+						</li>
 					</ul>
 			<?php 
 				}
 			?>
 		</section>
+		<script src="bower_components/jQuery/dist/jquery.min.js"></script>
 		<script src="scripts/all.js"></script>
 	</div>
 </body>

@@ -1,0 +1,17 @@
+{
+  "name": "to-do-list",
+  "homepage": "https://github.com/jonathanslima/to-do-list",
+  "authors": [
+    "jonathanslima <jonathan633.jl@gmail.com>"
+  ],
+  "description": "An Amazing To Do List",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

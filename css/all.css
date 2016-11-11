@@ -69,7 +69,8 @@ Item style
 ========================================================
 */
 .showTasks{
-	margin-top: 15px
+	margin-top: 15px;
+	height: 48px;
 }
 
 .showTasks ul{
@@ -82,7 +83,21 @@ Item style
 	background-color: #fafafa;
 	color: #0b61a4;
 	border-bottom: 1px solid #0b61a4;
+	cursor: pointer;
 }
+
+.task-edit, .task-remove{
+	float: right;
+	width: 20px;
+	padding-left: 15px;
+	padding-top: 3px;
+}
+
+.task-remove img, .task-edit img{
+	width: 20px;
+	display: none;
+}
+
 
 /*
 Message highlight
