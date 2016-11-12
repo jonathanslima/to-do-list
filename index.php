@@ -23,7 +23,6 @@
 		<section class="showTasks">
 			<ul class="item-task">
 				<?php 
-					$connection = mysqli_connect('localhost', 'root', '', 'todolist');
 					$getTask		= mysqli_query($connection, 'SELECT * FROM task');
 					$getId			= mysqli_query($connection, 'SELECT * FROM task WHERE id');
 
