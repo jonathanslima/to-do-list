@@ -1,3 +1,6 @@
+<!-- Connect to database -->
+<?php include 'connection.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +18,6 @@
 			<?php 
 				//Receive item from form
 				$task = $_GET["addTask"];
-				//Connect to database
-				$connection = mysqli_connect('localhost', 'root', '', 'todolist');
 
 				//Function Insert task
 				function insertTask($task, $connection){

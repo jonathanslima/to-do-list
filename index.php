@@ -1,3 +1,6 @@
+<!-- Connect to database -->
+<?php include 'scripts/connection.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,17 +24,20 @@
 			<ul class="item-task">
 				<?php 
 					$connection = mysqli_connect('localhost', 'root', '', 'todolist');
-					$getTask = mysqli_query($connection, 'SELECT * FROM task');
+					$getTask		= mysqli_query($connection, 'SELECT * FROM task');
+					$getId			= mysqli_query($connection, 'SELECT * FROM task WHERE id');
 
-					while ($taskItem = mysqli_fetch_assoc($getTask)) {
+					while ($taskItem  = mysqli_fetch_assoc($getTask)) {
+								 $taskId 		= mysqli_fetch_assoc($getId);
 				?>
 					<li><?php echo $taskItem['item']; ?>
 						<span class="task-edit">
-							<img src="img/settings.svg" alt="">
+							<img src="img/settings.svg" alt="edit item">
 						</span>
 
 						<span class="task-remove">
-							<img src="img/remove.svg" alt="">
+							<a href="scripts/remove-task.php?id=<?php echo $taskId['id'] ?>&item=<?php echo $taskItem['item'] ?>">	<img src="img/remove.svg" alt="remove item">
+							</a>
 						</span>
 					</li>
 				<?php 
