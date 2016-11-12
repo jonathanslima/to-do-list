@@ -25,12 +25,14 @@ Titles
 	font-size: 3em;
 	margin: 25px 0;
 	font-family: Lobster;
+	color: #49306b;
 }
 
 .support-title{
 	font-size: 1.5em;
 	margin: 40px 0;
 	font-family: Lobster;
+	color: #7f7caf;
 }
 
 /*
@@ -42,6 +44,22 @@ Form
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: center;
+}
+
+.form-input{
+	width: 100%;
+	margin-bottom: 20px;
+	border: none;
+	border-bottom: 1px ridge #21e061;
+	padding: 10px 0 5px 5px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.form-input:focus{
+	box-sizing: border-box;
+	outline: none;
+	text-align: center;
 }
 
 .form-button{
@@ -59,9 +77,10 @@ Form
 	background-color: #21b252;
 }
 
-
-input[type="text"]{
-	border: 3px solid rgba(11,97,164,.5)
+.erro-msg{
+	color: red;
+	font-size: 12px;
+	display: none;
 }
 
 /*
@@ -80,9 +99,10 @@ Item style
 .showTasks ul li{
 	list-style-type: none;
 	padding: 10px;
-	background-color: #fafafa;
-	color: #0b61a4;
-	border-bottom: 1px solid #0b61a4;
+	background-color: #f8f8f8;
+	color: #7F7caf;
+	border-bottom: 1px solid #7F7caf;
+	text-align: left;
 }
 
 .task-edit, .task-remove{

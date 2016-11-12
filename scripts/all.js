@@ -1,15 +1,21 @@
 $(function () {
+	$('li').hover(function(){
+		$(this).find('.task-edit img').fadeIn('fast').css('display', 'inline-block');
+		$(this).find('.task-remove img').fadeIn('fast').css('display', 'inline-block');
 
-	var elementEdit		= '.task-edit img';
-	var elementRemove	= '.task-remove img';
-
-	$('.item-task li').bind('mouseenter', function () {
-		$(this).find(elementEdit).fadeIn().css('display', 'inline-block');
-		$(this).find(elementRemove).fadeIn().css('display', 'inline-block');
+		}, function(){
+		$(this).find('.task-remove img').fadeOut('fast');
+		$(this).find('.task-edit img').fadeOut('fast');
 	});
 
-	$('.item-task li').bind('mouseleave', function () {
-		$(this).find(elementRemove).fadeOut();
-		$(this).find(elementEdit).fadeOut();
+	$('.form-button').bind('click', function(){
+		if($('.form-input').val().length < 5){
+			$('.erro-msg').show('slow');
+			return false;
+		}
+	});
+
+	$('.form-input').bind('keyup', function(){
+		$('.erro-msg').hide('slow');
 	});
 });
