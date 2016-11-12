@@ -1,6 +1,6 @@
 # An Amazing To Do List
 
-[See online: ](http://jonathanlima.com.br/todolist/)
+See online: [To Do List](http://jonathanlima.com.br/todolist/)
 
 ![App layout](layout.png)
 
