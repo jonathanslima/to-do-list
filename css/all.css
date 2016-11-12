@@ -83,7 +83,6 @@ Item style
 	background-color: #fafafa;
 	color: #0b61a4;
 	border-bottom: 1px solid #0b61a4;
-	cursor: pointer;
 }
 
 .task-edit, .task-remove{
@@ -96,6 +95,7 @@ Item style
 .task-remove img, .task-edit img{
 	width: 20px;
 	display: none;
+	cursor: pointer;
 }
 
 

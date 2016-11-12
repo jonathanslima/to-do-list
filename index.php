@@ -18,26 +18,26 @@
 		</form>
 
 		<section class="showTasks">
-			<?php 
-				$connection = mysqli_connect('localhost', 'root', '', 'todolist');
-				$getTask = mysqli_query($connection, 'SELECT * FROM task');
+			<ul class="item-task">
+				<?php 
+					$connection = mysqli_connect('localhost', 'root', '', 'todolist');
+					$getTask = mysqli_query($connection, 'SELECT * FROM task');
 
-				while ($taskItem = mysqli_fetch_assoc($getTask)) {
-			?>
-					<ul class="item-task">
-						<li><?php echo $taskItem['item']; ?>
-							<span class="task-edit">
-								<img src="img/settings.svg" alt="">
-							</span>
+					while ($taskItem = mysqli_fetch_assoc($getTask)) {
+				?>
+					<li><?php echo $taskItem['item']; ?>
+						<span class="task-edit">
+							<img src="img/settings.svg" alt="">
+						</span>
 
-							<span class="task-remove">
-								<img src="img/remove.svg" alt="">
-							</span>
-						</li>
-					</ul>
-			<?php 
-				}
-			?>
+						<span class="task-remove">
+							<img src="img/remove.svg" alt="">
+						</span>
+					</li>
+				<?php 
+					}
+				?>
+			</ul>
 		</section>
 		<script src="bower_components/jQuery/dist/jquery.min.js"></script>
 		<script src="scripts/all.js"></script>

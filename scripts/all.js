@@ -1,15 +1,15 @@
 $(function () {
 
-	var elementEdit 	= '.task-edit img';
+	var elementEdit		= '.task-edit img';
 	var elementRemove	= '.task-remove img';
 
-	$('.item-task').bind('mouseenter', function () {
-		$(elementRemove).fadeIn().css('display', 'inline-block');
-		$(elementEdit).fadeIn().css('display', 'inline-block');
+	$('.item-task li').bind('mouseenter', function () {
+		$(this).find(elementEdit).fadeIn().css('display', 'inline-block');
+		$(this).find(elementRemove).fadeIn().css('display', 'inline-block');
 	});
 
-	$('.item-task').bind('mouseleave', function () {
-		$(elementRemove).fadeOut();
-		$(elementEdit).fadeOut();
+	$('.item-task li').bind('mouseleave', function () {
+		$(this).find(elementRemove).fadeOut();
+		$(this).find(elementEdit).fadeOut();
 	});
 });
