@@ -10,12 +10,21 @@ General
 }
 
 #container{
-	width: 700px;
+	max-width: 700px;
+	min-width: 300px;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .center{
 	text-align: center;
+}
+
+hr{
+	margin-top: 50px;
 }
 /*
 Titles
@@ -30,7 +39,7 @@ Titles
 
 .support-title{
 	font-size: 1.5em;
-	margin: 40px 0;
+	margin: 0 0 50px 0;
 	font-family: Lobster;
 	color: #7f7caf;
 }
@@ -118,13 +127,6 @@ Item style
 	cursor: pointer;
 }
 
-
-/*
-Message highlight
-========================================================
-*/
-
-
 /*
 Response
 ========================================================
@@ -156,4 +158,26 @@ Response
 
 .btn-back:hover{
 	background-color: #21b252;
+}
+
+/*
+Footer
+========================================================
+*/
+footer{
+	display: flex;
+	justify-content: center;
+	color: #21e061;
+	margin: 20px 0;
+}
+
+.heart img{
+	width: 15px;
+	margin: 0 7px;
+	animation: pulsar 0.5s ease infinite alternate;
+}
+
+@keyframes pulsar{
+  0%   {transform: scale(1);}
+  100% {transform: scale(1.3);}
 }
