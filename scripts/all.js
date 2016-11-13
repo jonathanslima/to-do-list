@@ -15,7 +15,15 @@ $(function () {
 		}
 	});
 
+	// Validating form
 	$('.form-input').bind('keyup', function(){
 		$('.erro-msg').hide('slow');
 	});
+
+	// Show year in footer
+	var date = new Date();
+	var thisYear = date.getFullYear();
+
+	$('.date').html(thisYear)
 });
+
