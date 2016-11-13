@@ -8,22 +8,39 @@ $(function () {
 		$(this).find('.task-edit img').fadeOut('fast');
 	});
 
+	// Validating form
 	$('.form-button').bind('click', function(){
 		if($('.form-input').val().length < 5){
-			$('.erro-msg').show('slow');
+			$('.erro-msg').show().html('You need to write a msg with more than 5 characters.');
+			return false;
+		}else if($('.form-input').val().length > 50){
+			$('.erro-msg').show().html('You write a msg with more than 50 characters.');
 			return false;
 		}
 	});
 
-	// Validating form
 	$('.form-input').bind('keyup', function(){
 		$('.erro-msg').hide('slow');
 	});
+
+	// Counting characters
+	$('.form-input').bind('keyup', function(){
+		$('.count-char').html($('.form-input').val().length);
+		if($('.form-input').val().length < 5){
+			$('.form').find('label').css('color', 'red');
+		}else if($('.form-input').val().length > 50){
+			$('.form').find('label').css('color', 'red');
+		}else{
+			$('.form').find('label').css('color', '#21e061');
+		}
+	});
+
+	
 
 	// Show year in footer
 	var date = new Date();
 	var thisYear = date.getFullYear();
 
-	$('.date').html(thisYear)
+	$('.date').html(thisYear);
 });
 

@@ -25,8 +25,9 @@
 			<h2 class="support-title center">Try it!</h2>
 
 			<form class="form" action="scripts/add-task.php" method="get">
-				<span class="erro-msg">You write a msg with more than 50 characters.</span>
-				<input class="form-input" type="text" name="addTask" autofocus required autofocus placeholder="Add new to do item"/>
+				<span class="erro-msg"></span>
+				<input class="form-input" type="text" name="addTask" autofocus required autofocus placeholder="Add new to do item 5-50 characters"/>
+				<label><span class="count-char">0</span> characters</label>
 				<input class="form-button" type="submit" name="submit" value="Add Task!" />
 			</form>
 
